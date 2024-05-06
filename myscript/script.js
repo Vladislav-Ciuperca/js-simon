@@ -37,3 +37,40 @@ function genera() {
 
 }
 
+setInterval(function () {
+    numContainer.innerHTML = ""
+}, 4000)
+
+// richiamo con un const l'imput dell utente
+const myNumbers = document.querySelectorAll(".guess")
+
+
+// creo un array dove mettero i numeri inseriti dall utente
+const mieiNumeri = []
+// quado clicco su controlla...
+function controlla() {
+    // ciclo che legge i numeri inseriti dall utente
+    for (let i = 0; i < myNumbers.length; i++) {
+        const myNumero = myNumbers[i];
+        mieiNumeri.push(parseInt(myNumero.value))
+        // ciclo che legge i numeri gemerati dal computer
+        for (let z = 0; z < aiNumeri.length; z++) {
+            const aiNumero = aiNumeri[z];
+            console.log(aiNumero)
+            if (aiNumeri[z].includes(mieiNumeri[i])) {
+                console.log("ok")
+                risposta.innerHTML = "oke"
+            }
+            else {
+                console.log("no")
+                risposta.innerHTML = "nope"
+            }
+
+        }
+
+
+
+    }
+    console.log(mieiNumeri)
+
+}
