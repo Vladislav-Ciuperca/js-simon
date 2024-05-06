@@ -1,0 +1,17 @@
+body {
+    text-align: center;
+}
+
+p {
+    font-size: larger;
+}
+
+#numeri {
+    font-size: 3rem;
+}
+
+.guess {
+    width: 1rem;
+    height: 1rem;
+    text-align: center;
+}
